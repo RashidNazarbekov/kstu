@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainpage" prefHeight="602.0" prefWidth="983.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kstu.fitnes.controller.MainPageController">
+   <children>
+      <TabPane layoutX="182.0" prefHeight="602.0" prefWidth="833.0" style="-fx-background-color: #283747;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab style="-fx-background-color: #F5B041;" text="Клиенты">
+               <content>
+                  <AnchorPane prefHeight="574.0" prefWidth="804.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="7.0" prefHeight="27.0" prefWidth="183.0" text="Таблица &quot;Клиенты&quot;" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnAddClients" layoutX="14.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnAddClientsClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Добавить" textFill="WHITE" />
+                        <Button fx:id="btnUpdateClients" layoutX="226.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnUpdateClientsClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Редактировать" textFill="WHITE" />
+                        <Button fx:id="btnDeleteClients" layoutX="442.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnDeleteClientsClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Удалить" textFill="WHITE" />
+                        <Button fx:id="updateClientTebleView" layoutX="648.0" layoutY="527.0" mnemonicParsing="false" onAction="#updateClientTebleViewClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Обновить" textFill="WHITE" />
+                        <TableView fx:id="clientsTableView" editable="true" layoutX="14.0" layoutY="41.0" onMouseClicked="#clientsColumnClick" prefHeight="467.0" prefWidth="800.0">
+                           <columns>
+                              <TableColumn fx:id="client_id_column" prefWidth="110.39996337890625" text="Код клиента" />
+                              <TableColumn fx:id="last_name_column" prefWidth="184.0" text="Фамилия" />
+                              <TableColumn fx:id="first_name_column" prefWidth="173.5999755859375" text="Имя" />
+                              <TableColumn fx:id="phone_number_column" minWidth="0.0" prefWidth="188.0" text="Телефон" />
+                              <TableColumn fx:id="instructor_id_fk_column" prefWidth="141.5999755859375" text="Код тренера" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+            <Tab style="-fx-background-color: #F5B041;" text="Тренеры">
+               <content>
+                  <AnchorPane prefHeight="596.0" prefWidth="818.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="7.0" prefHeight="27.0" prefWidth="183.0" text="Таблица &quot;Тренеры&quot;" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnAddInstructors" layoutX="14.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnAddInstructorsClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Добавить" textFill="WHITE" />
+                        <Button fx:id="btnUpdateInstructors" layoutX="226.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnUpdateInstructorsClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Редактировать" textFill="WHITE" />
+                        <Button fx:id="btnDeleteInstructors" layoutX="442.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnDeleteInstructorsClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Удалить" textFill="WHITE" />
+                        <Button fx:id="updateInstructorTableView" layoutX="648.0" layoutY="527.0" mnemonicParsing="false" onAction="#updateInstructorTableViewClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Обновить" textFill="WHITE" />
+                        <TableView fx:id="instructorTableView" layoutX="14.0" layoutY="41.0" onMouseClicked="#clientsColumnClick" prefHeight="467.0" prefWidth="801.0">
+                           <columns>
+                              <TableColumn fx:id="instructor_id_column" prefWidth="148.800048828125" text="Код тренера" />
+                              <TableColumn fx:id="last_name_column1" prefWidth="224.79998779296875" text="Фамилия" />
+                              <TableColumn fx:id="first_name_column1" prefWidth="231.199951171875" text="Имя" />
+                              <TableColumn fx:id="oklad_column" minWidth="0.0" prefWidth="195.2000732421875" text="Оклад" />
+                           </columns>
+                        </TableView>
+                        <AnchorPane fx:id="instructorForm" layoutX="148.0" layoutY="40.0" prefHeight="470.0" prefWidth="414.0" style="-fx-background-color: #283747; -fx-border-radius: 5px; -fx-border-color: white;" visible="false">
+                           <children>
+                              <TextField fx:id="instructorIdTxt" layoutX="90.0" layoutY="123.0" prefHeight="26.0" prefWidth="234.0" />
+                              <TextField fx:id="instructorLastNameTxt" layoutX="90.0" layoutY="191.0" prefHeight="26.0" prefWidth="234.0" />
+                              <TextField fx:id="instructorFirstNameTxt" layoutX="90.0" layoutY="260.0" prefHeight="26.0" prefWidth="234.0" />
+                              <TextField fx:id="instructorOklad" layoutX="90.0" layoutY="328.0" prefHeight="26.0" prefWidth="234.0" />
+                              <Label layoutX="121.0" layoutY="37.0" text="Форма тренера" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="90.0" layoutY="106.0" text="Код тренера" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="90.0" layoutY="171.0" text="Фамилия" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="90.0" layoutY="240.0" text="Имя" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="90.0" layoutY="308.0" text="Оклад" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="buttonOkInstructor" layoutX="90.0" layoutY="394.0" mnemonicParsing="false" onAction="#buttonOkInstructorClick" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #46A2FF;" text="ОК" textFill="WHITE" />
+                              <Button fx:id="buttonCancelInstructor" layoutX="244.0" layoutY="394.0" mnemonicParsing="false" onAction="#buttonCancelInstructorClick" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #46A2FF;" text="Отмена" textFill="WHITE" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: #F5B041;" text="Абонементы">
+               <content>
+                  <AnchorPane prefHeight="596.0" prefWidth="818.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="7.0" prefHeight="27.0" prefWidth="226.0" text="Таблица &quot;Абонементы&quot;" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnAddAbonement" layoutX="14.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnAddAbonementClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Добавить" textFill="WHITE" />
+                        <Button fx:id="btnUpdateAbonement" layoutX="226.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnUpdateAbonementClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Редактировать" textFill="WHITE" />
+                        <Button fx:id="btnDeleteAbonement" layoutX="442.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnDeleteAbonementClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Удалить" textFill="WHITE" />
+                        <Button fx:id="updateAbonementTableView" layoutX="648.0" layoutY="527.0" mnemonicParsing="false" onAction="#updateAbonementTableViewClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Обновить" textFill="WHITE" />
+                        <TableView fx:id="abonementTableView" layoutX="14.0" layoutY="41.0" onMouseClicked="#clientsColumnClick" prefHeight="467.0" prefWidth="798.0">
+                           <columns>
+                              <TableColumn fx:id="abonement_id_column" prefWidth="130.39996337890625" text="Код абонемента" />
+                              <TableColumn fx:id="descriptionColumn" prefWidth="339.20001220703125" text="Описание" />
+                              <TableColumn fx:id="priceColumn" prefWidth="174.4000244140625" text="Цена" />
+                              <TableColumn fx:id="hall_id_fkColumn" minWidth="0.0" prefWidth="152.00003662109373" text="Код зала" />
+                           </columns>
+                        </TableView>
+                        <AnchorPane fx:id="abonementForm" layoutX="158.0" layoutY="41.0" prefHeight="470.0" prefWidth="414.0" style="-fx-background-color: #283747; -fx-border-radius: 5px; -fx-border-color: white;" visible="false">
+                           <children>
+                              <TextField fx:id="abonementIdTxt" layoutX="90.0" layoutY="123.0" prefHeight="26.0" prefWidth="234.0" />
+                              <TextField fx:id="abonementDescriptionTxt" layoutX="90.0" layoutY="191.0" prefHeight="26.0" prefWidth="234.0" />
+                              <TextField fx:id="abonementPriceTxt" layoutX="90.0" layoutY="260.0" prefHeight="26.0" prefWidth="234.0" />
+                              <TextField fx:id="abonementHallIdTxt" layoutX="90.0" layoutY="328.0" prefHeight="26.0" prefWidth="234.0" />
+                              <Label layoutX="121.0" layoutY="37.0" text="Форма абонемента" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="90.0" layoutY="106.0" text="Код абонемента" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="90.0" layoutY="171.0" text="Описание" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="90.0" layoutY="240.0" text="Цена" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="90.0" layoutY="308.0" text="Код зала" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="buttonOkAbonement" layoutX="90.0" layoutY="394.0" mnemonicParsing="false" onAction="#buttonOkAbonementClick" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #46A2FF;" text="ОК" textFill="WHITE" />
+                              <Button fx:id="buttonCancelAbonement" layoutX="244.0" layoutY="394.0" mnemonicParsing="false" onAction="#buttonCancelAbonementClick" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #46A2FF;" text="Отмена" textFill="WHITE" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: #F5B041;" text="Залы">
+               <content>
+                  <AnchorPane prefHeight="596.0" prefWidth="818.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="7.0" prefHeight="27.0" prefWidth="166.0" text="Таблица &quot;Залы&quot;" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnAddHall" layoutX="561.0" layoutY="296.0" mnemonicParsing="false" onAction="#btnAddHallClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Добавить" textFill="WHITE" />
+                        <Button fx:id="btnUpdateHall" layoutX="561.0" layoutY="343.0" mnemonicParsing="false" onAction="#btnUpdateHallClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Редактировать" textFill="WHITE" />
+                        <Button fx:id="btnDeleteHall" layoutX="280.0" layoutY="526.0" mnemonicParsing="false" onAction="#btnDeleteHallClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Удалить" textFill="WHITE" />
+                        <Button fx:id="updateHallTableView" layoutX="14.0" layoutY="526.0" mnemonicParsing="false" onAction="#updateHallTableViewClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Обновить" textFill="WHITE" />
+                        <TableView fx:id="hallTableView" layoutX="14.0" layoutY="41.0" onMouseClicked="#hallColumnClick" prefHeight="467.0" prefWidth="422.0">
+                           <columns>
+                              <TableColumn fx:id="hall_idColumn" prefWidth="152.00006103515625" text="Код зала" />
+                              <TableColumn fx:id="hall_nameColumn" prefWidth="268.8000244140625" text="Наименование" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="hallIdtxt" layoutX="535.0" layoutY="153.0" prefHeight="26.0" prefWidth="208.0" />
+                        <TextField fx:id="nameHallTxt" layoutX="535.0" layoutY="231.0" prefHeight="26.0" prefWidth="208.0" />
+                        <Label layoutX="535.0" layoutY="133.0" prefHeight="18.0" prefWidth="63.0" text="Код зала" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="535.0" layoutY="211.0" prefHeight="20.0" prefWidth="109.0" text="Наименование" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnClearHallForm" layoutX="561.0" layoutY="394.0" mnemonicParsing="false" onAction="#btnClearHallFormClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Очистить" textFill="WHITE" />
+                        <Label layoutX="575.0" layoutY="53.0" prefHeight="46.0" prefWidth="139.0" text="Форма залы" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: #F5B041;" text="Учет">
+               <content>
+                  <AnchorPane prefHeight="596.0" prefWidth="818.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="7.0" prefHeight="27.0" prefWidth="164.0" text="Таблица &quot;Учет&quot;" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnAddAccounting" layoutX="14.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnAddAccountingClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Добавить" textFill="WHITE" />
+                        <Button fx:id="btnUpdateAccounting" layoutX="226.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnUpdateAccountingClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Редактировать" textFill="WHITE" />
+                        <Button fx:id="btnDeleteAccounting" layoutX="442.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnDeleteAccountingClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Удалить" textFill="WHITE" />
+                        <Button fx:id="updateAccountingTableView" layoutX="648.0" layoutY="527.0" mnemonicParsing="false" onAction="#updateAccountingTableViewClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Обновить" textFill="WHITE" />
+                        <TableView fx:id="accountingTableView" layoutX="14.0" layoutY="41.0" onMouseClicked="#clientsColumnClick" prefHeight="467.0" prefWidth="802.0">
+                           <columns>
+                              <TableColumn fx:id="accounting_idColumn" prefWidth="129.6000213623047" text="Код учета" />
+                              <TableColumn fx:id="accountingClientIdColumn" prefWidth="131.199951171875" text="Код клиента" />
+                              <TableColumn fx:id="abonement_id_fkColumn" prefWidth="171.20001220703125" text="Код абонемента" />
+                              <TableColumn fx:id="month" minWidth="0.0" prefWidth="180.79998779296875" text="Месяц" />
+                              <TableColumn fx:id="status_oplaty_column" minWidth="0.0" prefWidth="187.199951171875" text="Статус оплаты" />
+                           </columns>
+                        </TableView>
+                        <AnchorPane fx:id="accountingForm" layoutX="168.0" layoutY="40.0" prefHeight="470.0" prefWidth="414.0" style="-fx-background-color: #283747; -fx-border-radius: 5px; -fx-border-color: white;" visible="false">
+                           <children>
+                              <TextField fx:id="accountingIdTxt" layoutX="90.0" layoutY="103.0" prefHeight="26.0" prefWidth="234.0" />
+                              <TextField fx:id="accountingAbonementIdTxt" layoutX="90.0" layoutY="216.0" prefHeight="26.0" prefWidth="234.0" />
+                              <TextField fx:id="accountingStatusOplatyTxt" layoutX="90.0" layoutY="334.0" prefHeight="26.0" prefWidth="234.0" />
+                              <TextField fx:id="accountingMonthTxt" layoutX="90.0" layoutY="275.0" prefHeight="26.0" prefWidth="234.0" />
+                              <Label layoutX="121.0" layoutY="34.0" text="Форма учета" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="90.0" layoutY="86.0" text="Код учета" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="90.0" layoutY="196.0" text="Код абонемента" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="90.0" layoutY="255.0" text="Месяц" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="90.0" layoutY="314.0" text="Статус оплаты" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="buttonOkAccounting" layoutX="90.0" layoutY="394.0" mnemonicParsing="false" onAction="#buttonOkAccountingClick" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #46A2FF;" text="ОК" textFill="WHITE" />
+                              <Button fx:id="buttonCancelAccounting" layoutX="244.0" layoutY="394.0" mnemonicParsing="false" onAction="#buttonCancelAccountingClick" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #46A2FF;" text="Отмена" textFill="WHITE" />
+                              <TextField fx:id="accountingClientIdTxt" layoutX="90.0" layoutY="158.0" prefHeight="26.0" prefWidth="234.0" />
+                              <Label layoutX="90.0" layoutY="141.0" text="Код клиента" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: #F5B041;" text="Администраторы">
+               <content>
+                  <AnchorPane prefHeight="596.0" prefWidth="818.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="7.0" prefHeight="27.0" prefWidth="274.0" text="Таблица &quot;Администраторы&quot;" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnAddUser" layoutX="581.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnAddUserClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Добавить" textFill="WHITE" />
+                        <Button fx:id="btnUpdateUser" layoutX="581.0" layoutY="403.0" mnemonicParsing="false" onAction="#btnUpdateUserClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Редактировать" textFill="WHITE" />
+                        <Button fx:id="btnDeleteUser" layoutX="317.0" layoutY="527.0" mnemonicParsing="false" onAction="#btnDeleteUserClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Удалить" textFill="WHITE" />
+                        <Button fx:id="updateUserTableView" layoutX="14.0" layoutY="527.0" mnemonicParsing="false" onAction="#updateUserTableViewClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Обновить" textFill="WHITE" />
+                        <TableView fx:id="usersTableView" layoutX="14.0" layoutY="41.0" onMouseClicked="#adminColumnClick" prefHeight="467.0" prefWidth="459.0">
+                           <columns>
+                              <TableColumn fx:id="user_id_column" prefWidth="105.60003662109375" text="Код админа" />
+                              <TableColumn fx:id="username_column" prefWidth="185.5999755859375" text="Имя пользователя" />
+                              <TableColumn fx:id="password_column" prefWidth="166.4000244140625" text="Пароль" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="525.0" layoutY="58.0" prefHeight="74.0" prefWidth="234.0" text="Форма администраторы" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="557.0" layoutY="213.0" text="Имя пользователя" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="usernameTxt" layoutX="557.0" layoutY="237.0" prefHeight="26.0" prefWidth="203.0" />
+                        <TextField fx:id="passwordTxt" layoutX="557.0" layoutY="299.0" prefHeight="26.0" prefWidth="203.0" />
+                        <Label layoutX="557.0" layoutY="279.0" text="Пароль" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnClearUserForm" layoutX="581.0" layoutY="455.0" mnemonicParsing="false" onAction="#btnClearUserFormClick" prefHeight="26.0" prefWidth="156.0" style="-fx-background-color: #46A2FF;" text="Очистить" textFill="WHITE" />
+                        <Label layoutX="555.0" layoutY="145.0" text="Код админа" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="userIdTxt" layoutX="555.0" layoutY="169.0" prefHeight="26.0" prefWidth="203.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <VBox layoutX="-1.0" prefHeight="602.0" prefWidth="172.0" style="-fx-background-color: #212F3D;">
+         <children>
+            <ImageView fitHeight="184.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="D:\Neobis\Dima Neman\fitnes\fitnes\images\logo.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="buttonInstructorClient" mnemonicParsing="false" onAction="#buttonInstructorClientClick" prefHeight="46.0" prefWidth="184.0" style="-fx-background-color: #283747; -fx-border-color: #FDFEFE;" text="Запрос тренеры + кол-во клиентов" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonInstructorPremium" mnemonicParsing="false" onAction="#buttonInstructorPremiumClick" prefHeight="46.0" prefWidth="184.0" style="-fx-background-color: #283747; -fx-border-color: #FDFEFE;" text="Запрос премии тренеров" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonChortClients" mnemonicParsing="false" onAction="#buttonChortClientsClick" prefHeight="46.0" prefWidth="184.0" style="-fx-background-color: #283747; -fx-border-color: #FDFEFE;" text="Запрос клиенты-должники" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonExit" mnemonicParsing="false" onAction="#buttonExit" prefHeight="46.0" prefWidth="184.0" style="-fx-background-color: #283747; -fx-border-color: #FDFEFE;" text="Выход" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="clientForm" layoutX="328.0" layoutY="69.0" prefHeight="470.0" prefWidth="414.0" style="-fx-background-color: #283747; -fx-border-color: white; -fx-border-radius: 5px;" visible="false">
+         <children>
+            <TextField fx:id="clientIdTxt" layoutX="93.0" layoutY="108.0" prefHeight="26.0" prefWidth="228.0" />
+            <TextField fx:id="clientLastNameTxt" layoutX="93.0" layoutY="162.0" prefHeight="26.0" prefWidth="228.0" />
+            <TextField fx:id="clientFirstNameTxt" layoutX="93.0" layoutY="218.0" prefHeight="26.0" prefWidth="228.0" />
+            <TextField fx:id="clientPhoneNumberTxt" layoutX="93.0" layoutY="273.0" prefHeight="26.0" prefWidth="228.0" />
+            <TextField fx:id="clientInstructorIdTxt" layoutX="94.0" layoutY="329.0" prefHeight="26.0" prefWidth="228.0" />
+            <Label layoutX="122.0" layoutY="31.0" text="Форма клиента" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="93.0" layoutY="90.0" text="Код клиента" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="93.0" layoutY="142.0" text="Фамилия" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="93.0" layoutY="198.0" text="Имя" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="93.0" layoutY="253.0" text="Номер телефона" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="93.0" layoutY="309.0" text="Код тренера" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonOkClient" layoutX="96.0" layoutY="387.0" mnemonicParsing="false" onAction="#buttonOkClientClick" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #46A2FF;" text="OK" textFill="WHITE" />
+            <Button fx:id="buttonCancelClient" layoutX="241.0" layoutY="387.0" mnemonicParsing="false" onAction="#buttonCancelClient" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #46A2FF;" text="Отмена" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="selectAnchor" layoutX="183.0" layoutY="28.0" prefHeight="574.0" prefWidth="826.0" style="-fx-background-color: #283747;" visible="false">
+         <children>
+            <Label fx:id="selectLabel" layoutX="140.0" layoutY="12.0" prefHeight="35.0" prefWidth="545.0" text="Запрос тренеры + кол-во клиентов" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonClose" layoutX="320.0" layoutY="533.0" mnemonicParsing="false" onAction="#buttonCloseClick" prefHeight="26.0" prefWidth="185.0" style="-fx-background-color: #46A2FF;" text="Закрыть" textFill="WHITE" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

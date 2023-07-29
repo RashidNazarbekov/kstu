@@ -1,0 +1,23 @@
+package kg.kstu.sweetshop.models;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Supply {
+
+    private Long id;
+
+    private String name;
+
+    private Long measurementId;
+
+    private String measurement;
+
+    private Double amount;
+
+    private Double sum;
+}

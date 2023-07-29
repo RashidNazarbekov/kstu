@@ -1,0 +1,11 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥Òà²üÿÿÿÿ8ğ³àù0
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Üÿ¾ÿÿÿÿÿ8ğ³àù0
+r	java:S117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓúêÓøÿÿÿÿ8ğ³àù0
+m	java:S117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åæ¡”8ñ³àù0
+t	java:S116"XRename this field "status_oplaty" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãˆÏã8ı³àù0
+|
+java:S4144G"_Update this method so that its implementation is not identical to "isStatus_oplaty" on line 67.(éÒŸ8„´àù0
+o	java:S100C"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šéäåúÿÿÿÿ8‘´àù0
+j	java:S100G"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éÒŸ8’´àù0
+j	java:S100K"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åæ¡”8“´àù0

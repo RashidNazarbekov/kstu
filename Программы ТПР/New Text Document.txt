@@ -1,0 +1,10 @@
+INSERT INTO tbl_Act–EventCombinations ( [Action], Event, Probabillity )
+SELECT qry_Action_List.Action, qry_Event_List.Event, qry_Event_List.Probability
+FROM qry_Action_List, qry_Event_List;
+
+
+INSERT INTO tbl_SumOfProbabilities ( SumOfProbabilities )
+SELECT Sum(qry_Event_List.Probability) AS SumOfProbabilities
+FROM qry_Event_List;
+
+

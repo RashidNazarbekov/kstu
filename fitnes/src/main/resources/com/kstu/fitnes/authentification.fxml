@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="485.0" prefWidth="600.0" style="-fx-background-color: #283747;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kstu.fitnes.controller.AuthentificationController">
+   <children>
+      <ImageView fitHeight="115.0" fitWidth="122.0" layoutX="239.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-radius: 20px;">
+         <image>
+            <Image url="D:\Neobis\Dima Neman\fitnes\fitnes\images\ava.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="145.0" layoutY="22.0" prefHeight="55.0" prefWidth="302.0" text="Аутентификация" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="145.0" layoutY="241.0" text="Username" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="145.0" layoutY="305.0" text="Password" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsername" layoutX="145.0" layoutY="261.0" prefHeight="34.0" prefWidth="302.0" promptText="Username" />
+      <Button fx:id="btnLogin" layoutX="226.0" layoutY="392.0" mnemonicParsing="false" onAction="#loginClick" prefHeight="44.0" prefWidth="141.0" style="-fx-background-color: #46A2FF;" text="Вход" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <PasswordField fx:id="txtPassword" layoutX="145.0" layoutY="325.0" prefHeight="34.0" prefWidth="302.0" promptText="Password" />
+      <Label fx:id="label1" layoutX="172.0" layoutY="214.0" prefHeight="20.0" prefWidth="309.0" textFill="#e40000">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="warning_image" fitHeight="20.0" fitWidth="26.0" layoutX="145.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="D:\Neobis\Dima Neman\fitnes\fitnes\images\warning.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

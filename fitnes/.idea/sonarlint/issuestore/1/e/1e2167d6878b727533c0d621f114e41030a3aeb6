@@ -1,0 +1,28 @@
+
+v
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(–Ã½ø8ç­àù0
+l
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¥´‡ˆ8ÿ±àù0
+q
+java:S2095["OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Åÿñ³ÿÿÿÿÿ8ÿ±àù0
+q
+java:S2095u"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(·‰úöúÿÿÿÿ8ÿ±àù0
+l
+java:S20959"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(²´ß‹8ÿ±àù0
+m
+java:S2095’"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÆÑÔµ8€²àù0
+S
+java:S2696"6Make the enclosing method "static" or remove this set.(ãâÁ8–²àù0
+H
+java:S1168#"+Return an empty collection instead of null.(¥¹ï8¶²àù0
+S
+java:S26968"6Make the enclosing method "static" or remove this set.(ãâÁ8¼²àù0
+S
+java:S2696Z"6Make the enclosing method "static" or remove this set.(ãâÁ8Ë²àù0
+U	java:S106`"9Replace this use of System.out or System.err by a logger.(ÎŞ¹¿8Ó²àù0
+S
+java:S2696t"6Make the enclosing method "static" or remove this set.(ãâÁ8Ú²àù0
+U	java:S106|"9Replace this use of System.out or System.err by a logger.(°¡á8ä²àù0
+T
+java:S2696‘"6Make the enclosing method "static" or remove this set.(ãâÁ8é²àù0
+[	java:S106–"9Replace this use of System.out or System.err by a logger.(Ã¢›œøÿÿÿÿ8í²àù0

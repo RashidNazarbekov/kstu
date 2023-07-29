@@ -1,0 +1,39 @@
+
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ñ×©’
+d
+java:S1192"IDefine a constant instead of duplicating this literal "password" 3 times.(Ú½€öüÿÿÿÿ
+c
+java:S1192"HDefine a constant instead of duplicating this literal "user_id" 3 times.(Ë°³õùÿÿÿÿ
+d
+java:S1192"IDefine a constant instead of duplicating this literal "username" 3 times.(øè·´ûÿÿÿÿ
+e
+java:S2095Z"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(í»ıÙ
+f
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ç²·û
+f
+java:S2095©"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ñşí‹
+j
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¶­ÅÏùÿÿÿÿ
+j
+java:S2095s"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÈÿÀÿÿÿÿÿ
+j
+java:S20959"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Íâá”úÿÿÿÿ
+L
+java:S2696"6Make the enclosing method "static" or remove this set.(ãâÁ
+A
+java:S1168#"+Return an empty collection instead of null.(¥¹ï
+L
+java:S26968"6Make the enclosing method "static" or remove this set.(ãâÁ
+L
+java:S2696Y"6Make the enclosing method "static" or remove this set.(ãâÁ
+S	java:S106^"9Replace this use of System.out or System.err by a logger.(òŞşÿÿÿÿ
+L
+java:S2696r"6Make the enclosing method "static" or remove this set.(ãâÁ
+S	java:S106y"9Replace this use of System.out or System.err by a logger.(š±•÷øÿÿÿÿ
+M
+java:S2696"6Make the enclosing method "static" or remove this set.(ãâÁ
+T	java:S106“"9Replace this use of System.out or System.err by a logger.( ¡Îıÿÿÿÿ
+M
+java:S2696¨"6Make the enclosing method "static" or remove this set.(ãâÁ
+R	java:S125´"<This block of commented-out lines of code should be removed.(†€éˆ

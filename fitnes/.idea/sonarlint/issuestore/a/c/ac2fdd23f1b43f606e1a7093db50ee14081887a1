@@ -1,0 +1,11 @@
+
+P
+java:S11416"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+r	java:S116""XRename this field "warning_image" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Ú‚‡úÿÿÿÿ
+œ
+java:S1186\"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷‹¾†ÿÿÿÿÿ
+m
+java:S3776+"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(·þéŠøÿÿÿÿ
+U
+java:S1854?":Remove this useless assignment to local variable "stage1".(ÇøÎ³ûÿÿÿÿ
+Q	java:S125I"<This block of commented-out lines of code should be removed.(ì‘òŠ
